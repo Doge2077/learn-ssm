@@ -23,4 +23,9 @@ public class Vtuber {
         System.out.println("This is destory()");
     }
 
+    public String speak (String words) {
+        System.out.println(words);
+        return words;
+    }
+
 }

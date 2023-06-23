@@ -22,8 +22,13 @@ public class Main {
 //        Vtuber v = context.getBean(Vtuber.class);
 //        System.out.println(v);  // 注入了 name 初始值 Hiiro
 
-        Guanzhu guanzhu = context.getBean(Guanzhu.class);
-        System.out.println(guanzhu);
+//        Guanzhu guanzhu = context.getBean(Guanzhu.class);
+//        System.out.println(guanzhu);
+
+        Vtuber v = context.getBean(Vtuber.class);
+        v.speak("I'm Hiiro vtuber, nice to meet you ~~~");
+        System.out.println(v.getClass());
+
     }
 }
 
