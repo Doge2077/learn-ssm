@@ -1,5 +1,6 @@
 package com.learn;
 
+import com.learn.bean.Guanzhu;
 import com.learn.bean.Vtuber;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
@@ -18,7 +19,11 @@ public class Main {
 //        Vtuber 类的作用域是 prototype 时，即每次获取该 bean 都会创建一个新的对象，而在该作用域下，容器不会管理 bean 的生命周期，也就不会调用其销毁方法 destory()。
 //        */
 
+//        Vtuber v = context.getBean(Vtuber.class);
+//        System.out.println(v);  // 注入了 name 初始值 Hiiro
 
+        Guanzhu guanzhu = context.getBean(Guanzhu.class);
+        System.out.println(guanzhu);
     }
 }
 
