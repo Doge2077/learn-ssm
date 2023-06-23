@@ -2,5 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="vtuber" class="com.learn.bean.Vtuber" init-method="init" destroy-method="destory" scope="prototype"/>
+<!--    单例模式的 Bean 对象会在一开始按照配置顺序初始化，添加 depend-on 可以在加载该类前加载 depend-on 中的类，甚至可以加载多例类-->
+    <bean name="son" class="com.learn.bean.Son" depends-on="vtuber"/>
+    <bean name="father" class="com.learn.bean.Father"/>
 
 </beans>
