@@ -1,8 +1,10 @@
 package com.learn.bean;
 
+import lombok.Data;
 import lombok.ToString;
 
 @ToString
+@Data
 public class Vtuber {
     String name;
     Integer age;

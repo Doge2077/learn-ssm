@@ -3,6 +3,10 @@ package com.learn;
 import com.learn.bean.*;
 import com.learn.congfig.mainConfiguration01;
 import com.learn.congfig.mainConfiguration02;
+import com.learn.congfig.mainConfiguration03;
+import com.learn.mappers.testMapper;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 //public class Main {
@@ -43,10 +47,19 @@ public class Main {
 //        Fans fan = annotationConfigApplicationContext.getBean(Fans.class);
 //        System.out.println(fan);
 
-        AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration02.class);
+//        AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration02.class);
+//
+//        reVtuber v = beans.getBean(reVtuber.class);
+//        System.out.println(v);
 
-        reVtuber v = beans.getBean(reVtuber.class);
-        System.out.println(v);
+//        AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration02.class);
+//        SqlSessionTemplate template = beans.getBean(SqlSessionTemplate.class);
+//        testMapper mapper = template.getMapper(testMapper.class);
+//        System.out.println(mapper.getStudentBySid(1));
+
+        AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration03.class);
+        testMapper mapper = beans.getBean(testMapper.class);
+        System.out.println(mapper.getStudentBySid(1));
 
     }
 }
