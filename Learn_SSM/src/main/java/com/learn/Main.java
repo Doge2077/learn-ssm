@@ -5,6 +5,8 @@ import com.learn.congfig.mainConfiguration01;
 import com.learn.congfig.mainConfiguration02;
 import com.learn.congfig.mainConfiguration03;
 import com.learn.mappers.testMapper;
+import com.learn.service.testService;
+import com.learn.service.testServiceImpl;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -57,9 +59,14 @@ public class Main {
 //        testMapper mapper = template.getMapper(testMapper.class);
 //        System.out.println(mapper.getStudentBySid(1));
 
+
         AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration03.class);
-        testMapper mapper = beans.getBean(testMapper.class);
-        System.out.println(mapper.getStudentBySid(1));
+        testService service = beans.getBean(testService.class);
+        System.out.println(service.getStudentBySid(1));
+
+//        AnnotationConfigApplicationContext beans = new AnnotationConfigApplicationContext(mainConfiguration03.class);
+//        testMapper mapper = beans.getBean(testMapper.class);
+//        System.out.println(mapper.getStudentBySid(1));
 
     }
 }
