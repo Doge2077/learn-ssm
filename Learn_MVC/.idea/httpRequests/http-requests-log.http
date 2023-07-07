@@ -1,0 +1,18 @@
+GET http://localhost:8080/mvc/mainpage
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-07T155328.200.html
+
+###
+
+GET http://localhost:8080/mvc/mainpage
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-07-07T155321.404.html
+
+###
+
